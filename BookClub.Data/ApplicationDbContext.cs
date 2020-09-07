@@ -11,7 +11,10 @@ namespace BookClub.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+
         }
+        public virtual DbSet<Book> Books { get; set; }
+    
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
