@@ -10,8 +10,5 @@ namespace BookClub.Core.Enums
         Horror = 1,
         Drama = 2,
         Thriller = 3,
-
-        
-
     }
 }

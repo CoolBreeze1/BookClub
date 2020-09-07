@@ -1,0 +1,61 @@
+﻿@model BookClub.Web.Models.BookEditViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-center">
+                <h1>Add a book to your library</h1>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+       <div class="col-12">
+           <div class="d-flex justify-content-center">
+
+               @using (@Html.BeginForm("Edit", "Books", FormMethod.Post, new { @class = "form w-50", role = "form" }))
+               {
+                   @Html.AntiForgeryToken()
+
+
+                   <div class="form-group">
+                       <label>Title</label>
+                       <input placeholder="Enter a title" class="form-control" />
+                   </div>
+
+                   <div class="form-group">
+                       <label>Description</label>
+                       <input placeholder="Enter a description" class="form-control" />
+                   </div>
+
+                   <div class="form-group">
+                       <label>Genre</label>
+                       @Html.DropDownListFor(x => x.GenreId, Model.Genres, "Please select a genre", new { @class = "form-control"})
+                   </div>
+
+                   <div class="form-group">
+                       <label>Author</label>
+                       <input placeholder="Enter the Authors name" class="form-control" />
+                   </div>
+
+                   <div class="form-group">
+                       <label>Publisher</label>
+                       <input placeholder="Enter the Publishers name" class="form-control" />
+                   </div>
+
+
+                   <div class="d-flex justify-content-end">
+                       <button type="submit" class="btn btn-primary" href="">Save</button>
+                   </div>
+
+               }
+
+           </div>
+       </div>
+    </div>
+</div>
