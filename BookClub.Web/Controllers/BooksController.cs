@@ -7,11 +7,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using BookClub.Web.Models;
 using BookClub.Core.Enums;
+using BookClub.Data;
 
 namespace BookClub.Web.Controllers
 {
     public class BooksController : BaseController
     {
+
+        protected readonly ApplicationDbContext db;
+
+        public BooksController(ApplicationDbContext context)
+        {
+            db = context;
+        }
 
         public IActionResult Edit()
         {
