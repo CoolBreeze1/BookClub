@@ -6,9 +6,9 @@ namespace BookClub.Core.Enums
 {
     public enum BookGenre
     {
-        Scifi = 0,
-        Horror = 1,
-        Drama = 2,
-        Thriller = 3,
+        Scifi = 1,
+        Horror = 2,
+        Drama = 3,
+        Thriller = 4,
     }
 }

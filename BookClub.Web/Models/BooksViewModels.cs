@@ -13,7 +13,7 @@ namespace BookClub.Web.Models
         public string Description { get; set; }
         public string Author { get; set; }
         public string Publisher { get; set; }
-        public int GenreId { get; set; }
+        public BookGenre Genre { get; set; }
         public IEnumerable<SelectListItem> Genres { get; set; }
     }
 }

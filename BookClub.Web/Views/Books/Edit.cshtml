@@ -36,8 +36,8 @@
 
                    <div class="form-group">
                        <label>Genre</label>
-                       <select class="form-control" asp-for="@Model.GenreId" asp-items="Html.GetEnumSelectList<BookGenre>()">
-                           <option selected="selected" value="">Please select</option>
+                       <select class="form-control" asp-for="@Model.Genre" asp-items="Html.GetEnumSelectList<BookGenre>()">
+                           <option selected="selected">Please select</option>
                        </select>
                    </div>
 
