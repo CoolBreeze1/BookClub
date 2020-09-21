@@ -21,4 +21,9 @@
     <ProjectReference Include="..\BookClub.Data\BookClub.Data.csproj" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+
 </Project>

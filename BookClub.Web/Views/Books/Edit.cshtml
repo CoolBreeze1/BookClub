@@ -1,4 +1,5 @@
 ﻿@model BookClub.Web.Models.BookEditViewModel
+@using BookClub.Core.Enums;
 @{
     ViewData["Title"] = "Edit";
 }
@@ -35,7 +36,9 @@
 
                    <div class="form-group">
                        <label>Genre</label>
-                       @Html.DropDownListFor(x => x.GenreId, Model.Genres, "Please select a genre", new { @class = "form-control"})
+                       <select class="form-control" asp-for="@Model.GenreId" asp-items="Html.GetEnumSelectList<BookGenre>()">
+                           <option selected="selected" value="">Please select</option>
+                       </select>
                    </div>
 
                    <div class="form-group">
