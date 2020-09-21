@@ -15,10 +15,7 @@ namespace BookClub.Web.Controllers
 
         public IActionResult Edit()
         {
-            var model = new BookEditViewModel()
-            {
-                Genres = Helpers.Dropdowns.GetBookGenreDropDown()
-            };
+            var model = new BookEditViewModel();
             return View(model);
         }
 
