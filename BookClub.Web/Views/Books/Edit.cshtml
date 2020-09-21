@@ -25,12 +25,12 @@
 
                    <div class="form-group">
                        <label>Title</label>
-                       <input placeholder="Enter a title" class="form-control" />
+                       @Html.TextBoxFor(x => x.Title, new { @class = "form-control", placeholder = "Enter book title"})
                    </div>
 
                    <div class="form-group">
                        <label>Description</label>
-                       <input placeholder="Enter a description" class="form-control" />
+                       @Html.TextAreaFor(x => x.Description, new { @class = "form-control", placeholder = "Enter book description" })
                    </div>
 
                    <div class="form-group">
@@ -40,12 +40,12 @@
 
                    <div class="form-group">
                        <label>Author</label>
-                       <input placeholder="Enter the Authors name" class="form-control" />
+                       @Html.TextBoxFor(x => x.Author, new { @class = "form-control", placeholder = "Enter book author" })
                    </div>
 
                    <div class="form-group">
                        <label>Publisher</label>
-                       <input placeholder="Enter the Publishers name" class="form-control" />
+                       @Html.TextBoxFor(x => x.Publisher, new { @class = "form-control", placeholder = "Enter book publisher" })
                    </div>
 
 

@@ -15,13 +15,20 @@ namespace BookClub.Web.Controllers
 
         public IActionResult Edit()
         {
-            var model = new BookEditViewModel() 
+            var model = new BookEditViewModel()
             {
                 Genres = Helpers.Dropdowns.GetBookGenreDropDown()
             };
             return View(model);
         }
 
-       
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(BookEditViewModel model)
+        {
+            return RedirectToAction("Index", "Home");
+        }
+
+
     }
 }

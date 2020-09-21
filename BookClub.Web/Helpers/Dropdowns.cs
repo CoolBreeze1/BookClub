@@ -15,7 +15,7 @@ namespace BookClub.Web.Helpers
             var list = new List<SelectListItem>();
             foreach (BookGenre item in items)
             {
-                list.Add(new SelectListItem() { Value = item.ToString(), Text = item.ToString() });
+                list.Add(new SelectListItem() { Value = item.Id.ToString(), Text = item.ToString() });
             }
             return list.OrderBy(x => x.Text).ToList();
         }
